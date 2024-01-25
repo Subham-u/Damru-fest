@@ -133,6 +133,7 @@ p{
 
 
 .footer {
+  width: 100%;
   z-index: -1000;
     background-color: #e9004ada;
     color: #fff;
