@@ -1002,3 +1002,11 @@ p{
 .images{
     background-color: #1c0522;
 }
+
+
+#msg{
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
+}
+
