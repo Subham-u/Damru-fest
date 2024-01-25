@@ -3,28 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Damru</title>
+    <title>Events | Damru</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link rel="stylesheet" href="competetions.css">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-    <section class="header">
-        <nav style="width:100%;" class="scrolled">
-            <div class="footer-lo">
-                <img src="images/COLOUR_WITHOUTBCG (1).png" style="width: 50%;" alt="">
-            </div>
-            <div class="nav-links" id="navLinks">
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="https://rishihood.edu.in/">About</a></li>
-                  <li><a href="caportal.html">Ambassador</a></li>
-                  <li><a href="FQs.html">FAQs</a></li>
-                  <li><a href="contactus.html">Contact&nbsp;Us</a></li>
-                </ul>
-            </div>
-    
-        </nav>
+
+    <!-- Header and Navbar -->
+<link rel="stylesheet" href="header.css">
+<header>
+  <div class="logo damrulogo">
+    <img src="images/COLOUR_WITHOUTBCG (1).png">
+  </div>
+  
+  <button class="nav-toggle">
+      <span class="hamburger"></span>
+  </button>
+  <div class="smalllogo">
+      <a href="#welcome-section" class="logolink">
+        <img src="images/COLOUR_WITHOUTBCG (1).png" alt="Damru logo" class="smalldamrulogo">
+      </a>
+  </div>
+
+  <nav class="nav" id="navbar">
+
+      <ul class="nav__list" id="navlinkitems">
+          <li class="nav__item" id="homeid">
+              <a href="index.html" class="nav__link" id="home">Home</a>
+          </li>
+          <li class="nav__item">
+              <a href="https://rishihood.edu.in/" target="_blank" class="nav__link" id="aboutheader">About</a>
+          </li>
+          <li class="nav__item">
+              <a href="caportal.html"  target="_blank" class="nav__link" id="service">Ambassador</a>
+          </li>
+          <li class="nav__item">
+            <a href="FQs.html" class="nav__link" target="_blank" id="faqs">FAQs</a>
+        </li>
+          <li class="nav__item">
+              <a href="contactus.html" class="nav__link" target="_blank" id="contactheader">Contact&nbsp;Us</a>
+          </li>
+      </ul>
+
+  </nav>
+</header>
+
+
+<script>
+window.onscroll = function () {
+scrollFunction();
+};
+function scrollFunction() {
+document.getElementById("navbar").style.background = "transparent";
+}
+
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelectorAll(".nav__link");
+
+navToggle.addEventListener("click", () => {
+document.body.classList.toggle("nav-open");
+});
+
+navLinks.forEach((link) => {
+link.addEventListener("click", () => {
+  document.body.classList.remove("nav-open");
+});
+});
+</script>
+
+
+
+
+    <div class="header">
         <div class="text-box">
             <h1>Events</h1>
             <p>
@@ -33,7 +86,10 @@
             </p>
             <a href="https://unstop.com/p/campus-ambassador-damru-rishihood-university-haryana-855150" class="hero-btn">Join Now</a>
         </div>
-    </section>
+        <div class="rightimg">
+            <img src="images/events-big-text-online-corporate-party-meeting-friends-colleagues-video-conference_501813-9.avif" alt="">
+        </div>
+    </div>
 
 
 
@@ -158,7 +214,31 @@
 
 
 
-<div style="width: 100vw; height: 20vh;"></div>
+<div style="width: 100vw; height: 10vh;"></div>
+<link rel="stylesheet" href="footer.css">
+<footer class="footer">
+
+  <div class="footer-logo">
+      <img src="images/BLACK.png" style="width: 50%;" alt="">
+  </div>
+  <div class="address">
+      <h2>Contact</h2>
+      <address>
+          Rishihood University, Sonipat, 131021<br> Harayana, India<br>
+      </address>
+      <p>© 2023 All rights reserved.</p>
+  </div>
+  
+  
+  <div class="social">
+      <h2>Follow Us</h2>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/rishihood"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/rishihooduni/"><i class="fab fa-twitter-square"></i></a>
+        <a href="https://www.instagram.com/damru_fest/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/school/rishihood/"><i class="fab fa-linkedin"></i></a>
+  </footer>
+
 
 
 </body>

@@ -8,7 +8,7 @@ body {
     
 /* Events Page */
 body{
-    background-color: #160023;
+  background: #1c0522;
 
     color: rgb(246, 246, 246);
 
@@ -16,77 +16,20 @@ body{
 
 
 .header {
+  display: flex;
     min-height: 100vh;
     width: 100%;
-    background-size: cover;
-    background-position: center;
     position: relative;
+    flex-wrap: wrap;
   }
-  
-  nav {
-    position: fixed;
-    display: flex;
-    opacity: 100%;
-    padding: 1% 1%;
-    justify-content: space-between;
-    align-items: center;
-    width: 1%;
-    z-index: 5;
-  }
-  
-  nav {
-    backdrop-filter: blur(10%);
-    background-color: rgba(0, 0, 0, 0.153);
-    z-index: 5000;
-  }
-  
-  
-  .nav-links {
-    display: flex;
-    justify-content: flex-end;
-    text-align: center;
-  }
-  
-  .nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 28px;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .nav-links ul li a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  
-  .logo1{
-    display: flex;
-      color: #fff;
-      font-weight: 900;
-      text-decoration: solid;
-      font-size: 2em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      align-items: center;
-  }
-  .logo2
-  {   
-      display: flex;
-      color: #fff;
-      font-weight: 900;
-      text-decoration: solid;
-      font-size: 3em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      align-items: center;
-  }
-  
-  .backdrop {
-    background-color: rgb(200, 255, 0);
-  }
-  
+.rightimg img{
+  position: relative;
+  left: 700px;
+  top: 250px;
+  /* box-shadow: 0px 0px 2ch 0px #fff; */
+  border-radius: 10px;
+  filter: saturate(120%);
+}
   .text-box {
     width: 90%;
     left: 55%;

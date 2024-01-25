@@ -12,7 +12,7 @@
 
         gtag('config', 'G-90T52VK88Q');
     </script>
-    <title>Damru</title>
+    <title>FAQs | Damru</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,25 +32,67 @@
 </head>
 
 <body>
-    <header>
-        <div class="footer-lo">
-            <img src="images/COLOUR_WITHOUTBCG (1).png" style="width: 50%;" alt="">
-        </div>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="https://rishihood.edu.in/">About Us</a></li>
-          <li><a href="caportal.html">Ambassador</a></li>
-          <li><a href="contactus.html">Contact&nbsp;Us</a></li>
-        </ul>
-      </header>
+    <!-- Header and Navbar -->
+<link rel="stylesheet" href="header.css">
+<header>
+  <div class="logo damrulogo">
+    <img src="images/COLOUR_WITHOUTBCG (1).png">
+  </div>
+  
+  <button class="nav-toggle">
+      <span class="hamburger"></span>
+  </button>
+  <div class="smalllogo">
+      <a href="#welcome-section" class="logolink">
+        <img src="images/COLOUR_WITHOUTBCG (1).png" alt="Damru logo" class="smalldamrulogo">
+      </a>
+  </div>
 
-    <div id="marquee" class="marquee owl-carousel owl-theme">
+  <nav class="nav" id="navbar">
 
-    </div>
-    <nav id="navigation">
+      <ul class="nav__list" id="navlinkitems">
+          <li class="nav__item" id="homeid">
+              <a href="index.html" class="nav__link" id="home">Home</a>
+          </li>
+          <li class="nav__item">
+              <a href="https://rishihood.edu.in/" target="_blank" class="nav__link" id="aboutheader">About</a>
+          </li>
+          <li class="nav__item">
+              <a href="caportal.html"  target="_blank" class="nav__link" id="service">Ambassador</a>
+          </li>
+          <li class="nav__item">
+              <a href="competitions.html" class="nav__link" target="_blank" id="work">Events</a>
+          </li>
+          <li class="nav__item">
+              <a href="contactus.html" class="nav__link" target="_blank" id="contactheader">Contact&nbsp;Us</a>
+          </li>
+      </ul>
+
+  </nav>
+</header>
 
 
-    </nav>
+<script>
+window.onscroll = function () {
+scrollFunction();
+};
+function scrollFunction() {
+document.getElementById("navbar").style.background = "transparent";
+}
+
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelectorAll(".nav__link");
+
+navToggle.addEventListener("click", () => {
+document.body.classList.toggle("nav-open");
+});
+
+navLinks.forEach((link) => {
+link.addEventListener("click", () => {
+  document.body.classList.remove("nav-open");
+});
+});
+</script>
 
     <div class="faq-container">
 
@@ -147,9 +189,82 @@
             </div>
         </section>
     </div>
-
+    <div style="width: 100vw; height: 20vh;"></div>
+           <!-- ----------CONTACT---------- -->
+           <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Us</h1>
+                        <p><i class="fas fa-paper-plane"></i> fest@rishihood.edu.in</p>
+                        <p><i class="fas fa-phone-square-alt"></i> +91 9811336095</p>
+                        <a href="images/my-cv.pdf" download class="btn btn2">Download Brochure</a>
+                    </div>
+                    <div class="contact-right">
+                      <form name='submit-to-google-sheet'>
+                          <input type="text" name="Name" placeholder="Your Name" required>
+                          <input type="email" name="Email" placeholder="Your Email" required>
+                          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                          <button type="submit" class="btn btn3">SUBMIT</button>
+                      </form>
+                      <span id="msg"></span>
+                  </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Footer -->
+        <div style="width: 100vw; height: 10vh;"></div>
+    
+    
+        <link rel="stylesheet" href="footer.css">
+        <footer class="footer">
+    
+          <div class="footer-logo">
+              <img src="images/BLACK.png" style="width: 50%;" alt="">
+          </div>
+          <div class="address">
+              <h2>Contact</h2>
+              <address>
+                  Rishihood University, Sonipat, 131021<br> Harayana, India<br>
+              </address>
+              <p>© 2023 All rights reserved.</p>
+          </div>
+          
+          
+          <div class="social">
+              <h2>Follow Us</h2>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/rishihood"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/rishihooduni/"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/damru_fest/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/school/rishihood/"><i class="fab fa-linkedin"></i></a>
+          </footer>
+    
+    
+        </div>
+        
+    
 
 
 </body>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzZ03SXRKxb84rHjAcRxx5ZkmGxTj4ZDFvYOVJUTDXXqt6AoLFb5pKfqwWPsoJuGKKM/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")  
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+                          msg.innerHTML = "Messages sent successfully"
+                          setTimeout(function(){
+                              msg.innerHTML = ""
+                          },5000)
+                          form.reset()
+          })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 </html>

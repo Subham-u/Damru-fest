@@ -20,7 +20,68 @@
 
 <body>
 
+    <link rel="stylesheet" href="header.css">
+    <header>
+      <div class="logo damrulogo">
+        <img src="images/COLOUR_WITHOUTBCG (1).png">
+      </div>
+      
+      <button class="nav-toggle">
+          <span class="hamburger"></span>
+      </button>
+      <div class="smalllogo">
+          <a href="#welcome-section" class="logolink">
+            <img src="images/COLOUR_WITHOUTBCG (1).png" alt="Damru logo" class="smalldamrulogo">
+          </a>
+      </div>
+  
+      <nav class="nav" id="navbar">
+  
+          <ul class="nav__list" id="navlinkitems">
+              <li class="nav__item" id="homeid">
+                  <a href="index.html" class="nav__link" id="home">Home</a>
+              </li>
+              <li class="nav__item">
+                  <a href="https://rishihood.edu.in/" target="_blank" class="nav__link" id="aboutheader">About</a>
+              </li>
 
+              <li class="nav__item">
+                  <a href="competitions.html" class="nav__link" target="_blank" id="work">Events</a>
+              </li>
+              <li class="nav__item">
+                <a href="FQs.html" class="nav__link" target="_blank" id="faqs">FAQs</a>
+            </li>
+              <li class="nav__item">
+                  <a href="contactus.html" class="nav__link" target="_blank" id="contactheader">Contact&nbsp;Us</a>
+              </li>
+          </ul>
+  
+      </nav>
+  </header>
+  
+  
+  <script>
+    window.onscroll = function () {
+    scrollFunction();
+  };
+  function scrollFunction() {
+    document.getElementById("navbar").style.background = "transparent";
+  }
+  
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelectorAll(".nav__link");
+  
+  navToggle.addEventListener("click", () => {
+    document.body.classList.toggle("nav-open");
+  });
+  
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      document.body.classList.remove("nav-open");
+    });
+  });
+  </script>
+  
 
 <section class="header">
     <div class="text-box">
@@ -31,12 +92,12 @@
         </p>
         <a href="https://unstop.com/p/campus-ambassador-damru-rishihood-university-haryana-855150" class="hero-btn">Join Now</a>
     </div>
+    <div class="rightimg">
+        <img src="images/flat-design-b2b-illustration_23-2149337639.avif" alt="">
+    </div>
 </section>
 
-<section>
 
-
-</section>
 
 
 <section id="about">
@@ -142,7 +203,7 @@
 </section>
 
 
-<!-- <link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="footer.css">
 <footer class="footer">
 
   <div class="footer-logo">
@@ -164,7 +225,7 @@
         <a href="https://twitter.com/rishihooduni/"><i class="fab fa-twitter-square"></i></a>
         <a href="https://www.instagram.com/damru_fest/"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/school/rishihood/"><i class="fab fa-linkedin"></i></a>
-  </footer> -->
+  </footer>
 
 
 
@@ -172,7 +233,6 @@
 
 </body>
  
-    
 </body>
 
 </html>
