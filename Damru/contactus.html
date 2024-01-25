@@ -9,105 +9,209 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <a href="index.html" class="nav-logo">Damru</a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="https://rishihood.edu.in/">About Us</a></li>
-            <li><a href="caportal.html">Ambassador</a></li>
-            <li><a href="FQs.html">FAQs</a></li>
-        </ul>
-    </header>
-    <main>
-        <h1 class="heading">Contact Us</h1>
-        <div class="container">
-            <h2>Competitions Team</h2>
-            <div class="team">
-                <div class="card">
-                    <button class="mail">
-                            <i class="fa-solid fa-envelope"></i>
-                        </button>
-                    <div class="profile-pic">
-                    </div>
-                    <div class="bottom">
-                        <div class="content">
-                            <span class="name">Vikas</span>
-                            <span class="about-me">Hi, I am vikas. I am a full stack web developer. Checkout my work on : https://freecodez.com</span>
-                        </div>
-                        <div class="bottom-bottom">
-                            <div class="social-links-container">
-                                <i class="fa-brands fa-linkedin"></i>
-                                <i class="fa-brands fa-x-twitter"></i>
-                                <i class="fa-brands fa-github"></i>
-                            </div>
-                            <button class="button">Contact Me</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <button class="mail">
-                            <i class="fa-solid fa-envelope"></i>
-                        </button>
-                    <div class="profile-pic">
-                    </div>
-                    <div class="bottom">
-                        <div class="content">
-                            <span class="name">Vikas</span>
-                            <span class="about-me">Hi, I am vikas. I am a full stack web developer. Checkout my work on : https://freecodez.com</span>
-                        </div>
-                        <div class="bottom-bottom">
-                            <div class="social-links-container">
-                                <i class="fa-brands fa-linkedin"></i>
-                                <i class="fa-brands fa-x-twitter"></i>
-                                <i class="fa-brands fa-github"></i>
-                            </div>
-                            <button class="button">Contact Me</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <button class="mail">
-                            <i class="fa-solid fa-envelope"></i>
-                        </button>
-                    <div class="profile-pic">
-                    </div>
-                    <div class="bottom">
-                        <div class="content">
-                            <span class="name">Vikas</span>
-                            <span class="about-me">Hi, I am vikas. I am a full stack web developer. Checkout my work on : https://freecodez.com</span>
-                        </div>
-                        <div class="bottom-bottom">
-                            <div class="social-links-container">
-                                <i class="fa-brands fa-linkedin"></i>
-                                <i class="fa-brands fa-x-twitter"></i>
-                                <i class="fa-brands fa-github"></i>
-                            </div>
-                            <button class="button">Contact Me</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    
+    <!-- Header and Navbar -->
+    <link rel="stylesheet" href="header.css">
+      <header>
+        <div class="logo damrulogo">
+          <img src="images/COLOUR_WITHOUTBCG (1).png">
         </div>
-        <link rel="stylesheet" href="footer.css">
-        <footer class="footer">
-            <div class="footer-logo">
-                <img src="images/BLACK.png" style="width: 50%;" alt="">
-            </div>
-            <div class="address">
-                <h2>Contact</h2>
-                <address>
-                    Rishihood University, Sonipat, 144411<br> Harayana, India<br>
-                </address>
-                <p>© 2023 All rights reserved.</p>
-            </div>
-            <div class="social">
-                <h2>Follow Us</h2>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/rishihood"><i class="fab fa-facebook"></i></a>
-                    <a href="https://twitter.com/rishihooduni/"><i class="fab fa-twitter-square"></i></a>
-                    <a href="https://www.instagram.com/damru_fest/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/school/rishihood/"><i class="fab fa-linkedin"></i></a>
-        </footer>
-    </main>
+        
+        <button class="nav-toggle">
+            <span class="hamburger"></span>
+        </button>
+        <div class="smalllogo">
+            <a href="#welcome-section" class="logolink">
+              <img src="images/COLOUR_WITHOUTBCG (1).png" alt="Damru logo" class="smalldamrulogo">
+            </a>
+        </div>
+    
+        <nav class="nav" id="navbar">
+    
+            <ul class="nav__list" id="navlinkitems">
+                <li class="nav__item" id="homeid">
+                    <a href="index.html" class="nav__link" id="home">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="https://rishihood.edu.in/" target="_blank" class="nav__link" id="aboutheader">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="caportal.html"  target="_blank" class="nav__link" id="service">Ambassador</a>
+                </li>
+                <li class="nav__item">
+                    <a href="competitions.html" class="nav__link" target="_blank" id="work">Events</a>
+                </li>
+                <li class="nav__item">
+                  <a href="FQs.html" class="nav__link" target="_blank" id="faqs">FAQs</a>
+              </li>
+
+            </ul>
+    
+        </nav>
+    </header>
+    
+    
+    <script>
+      window.onscroll = function () {
+      scrollFunction();
+    };
+    function scrollFunction() {
+      document.getElementById("navbar").style.background = "transparent";
+    }
+    
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelectorAll(".nav__link");
+    
+    navToggle.addEventListener("click", () => {
+      document.body.classList.toggle("nav-open");
+    });
+    
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        document.body.classList.remove("nav-open");
+      });
+    });
+    </script>
+    
+    
+
+
+
+
+    <div style="width: 100vw; height: 10vh;"></div>
+
+    <div class="title">
+        <h1>Meet The Organizing Team</h1>
+    </div>
+    <div class="team-container">
+
+        <div class="member-card">
+            <article class="card card--1">
+                <div class="card__img" style="background-image: url('https://www.w3schools.com/howto/img_avatar.png');">
+                </div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"
+                        style="background-image: url('https://www.w3schools.com/howto/img_avatar.png');">
+
+                    </div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Designation XYZ ABC 
+                    </span>
+                    <h3 class="card__title">Name ABC XYZ</h3>
+                    <span class="card__by"> <a href="https://www.linkedin.com/in/"
+                            class="card__author" target="_blank" title="linkedin">
+                            <img src="https://cdn-icons-png.flaticon.com/256/174/174857.png" alt="">
+                        </a></span>
+                        <span class="card__by"> <a href="https://www.instagram.com/in/"
+                            class="card__author" target="_blank" title="instagram">                    
+                                <img src="https://freelogopng.com/images/all_img/1658586823instagram-logo-transparent.png" alt="">
+                            </a></span>
+                            <span class="card__by"> <a href="https://www.whatsapp.com/in/"
+                            class="card__author" target="_blank" title="whatsapp">                    
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/767px-WhatsApp.svg.png" alt="">
+                            </a></span>
+                </div>
+            </article>
+        </div>
+        <div class="member-card">
+            <article class="card card--1">
+                <div class="card__img" style="background-image: url('https://www.w3schools.com/howto/img_avatar.png');">
+                </div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"
+                        style="background-image: url('https://www.w3schools.com/howto/img_avatar.png');">
+                    </div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Designation XYZ ABC 
+                    </span>
+                    <h3 class="card__title">Name ABC XYZ</h3>
+                    <span class="card__by"> <a href="https://www.linkedin.com/in/"
+                            class="card__author" target="_blank" title="linkedin">
+                            <img src="https://cdn-icons-png.flaticon.com/256/174/174857.png" alt="">
+                        </a></span>
+                        <span class="card__by"> <a href="https://www.instagram.com/in/"
+                            class="card__author" target="_blank" title="instagram">                    
+                                <img src="https://freelogopng.com/images/all_img/1658586823instagram-logo-transparent.png" alt="">
+                            </a></span>
+                            <span class="card__by"> <a href="https://www.whatsapp.com/in/"
+                                class="card__author" target="_blank" title="whatsapp">                    
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/767px-WhatsApp.svg.png" alt="">
+                                </a></span>
+                </div>
+            </article>
+        </div>
+        <div class="member-card">
+            <article class="card card--1">
+                <div class="card__img" style="background-image: url('https://www.w3schools.com/howto/img_avatar.png');">
+                </div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"
+                        style="background-image: url('https://www.w3schools.com/howto/img_avatar.png');">
+
+                    </div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Designation XYZ ABC 
+                    </span>
+                    <h3 class="card__title">Name ABC XYZ</h3>
+                    <span class="card__by"> <a href="https://www.linkedin.com/in/"
+                            class="card__author" target="_blank" title="linkedin">
+                            <img src="https://cdn-icons-png.flaticon.com/256/174/174857.png" alt="">
+                        </a></span>  
+                    <span class="card__by"> <a href="https://www.instagram.com/in/"
+                        class="card__author" target="_blank" title="instagram">                    
+                            <img src="https://freelogopng.com/images/all_img/1658586823instagram-logo-transparent.png" alt="">
+                        </a></span>
+                        <span class="card__by"> <a href="https://www.whatsapp.com/in/"
+                            class="card__author" target="_blank" title="whatsapp">                    
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/767px-WhatsApp.svg.png" alt="">
+                            </a></span>
+                </div>
+            </article>
+        </div>
+        
+
+
+
+        <div class="member-card">
+            <article class="card card--1">
+                <div class="card__img" style="background-image: url('https://www.w3schools.com/howto/img_avatar.png');">
+                </div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"
+                        style="background-image: url('https://www.w3schools.com/howto/img_avatar.png');">
+
+                    </div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category">Designation XYZ ABC 
+                    </span>
+                    <h3 class="card__title">Name ABC XYZ</h3>
+                    <span class="card__by"> <a href="https://www.linkedin.com/in/"
+                            class="card__author" target="_blank" title="linkedin">
+                            <img src="https://cdn-icons-png.flaticon.com/256/174/174857.png" alt="">
+                        </a></span>
+                        <span class="card__by"> <a href="https://www.instagram.com/in/"
+                            class="card__author" target="_blank" title="instagram">                    
+                                <img src="https://freelogopng.com/images/all_img/1658586823instagram-logo-transparent.png" alt="">
+                            </a></span>
+                            <span class="card__by"> <a href="https://www.whatsapp.com/in/"
+                            class="card__author" target="_blank" title="whatsapp">                    
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/767px-WhatsApp.svg.png" alt="">
+                            </a></span>
+                </div>
+            </article>
+        </div>
+
+
+
+
+
+
+
+        </div>
+
 </body>
 </html>
