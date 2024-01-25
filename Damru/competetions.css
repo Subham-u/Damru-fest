@@ -151,7 +151,7 @@ margin-bottom: 200px;
     width: 800px;
     height: 120px;
     
-    background: linear-gradient(transparent,#34f1ff,#2fedfb,#2bf1ff,transparent);
+    background: linear-gradient(transparent,#34ff59,#2ffb40,#2bff55,transparent);
     animation: animate 5s linear infinite;
     animation-play-state: paused;
 }
@@ -170,7 +170,7 @@ margin-bottom: 200px;
     content: '';
     position: absolute;
     inset: 3px;
-    background: #030039 ;
+    background: #000000 ;
 }
 .card .imgbox{
     position: absolute;
@@ -200,10 +200,10 @@ margin-bottom: 200px;
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 500px;
+    width: 400px;
     height: 250px;
     transform: translate(-50%,-50%);
-    background: linear-gradient(transparent,#ff3c7b,#ff3c7b,#ff3c7b,transparent);
+    background: linear-gradient(transparent,#ffb73c,#ffbe3c,#ffcb3c,transparent);
     animation: animate2 6s linear infinite;
 }
 @keyframes animate2 
@@ -219,7 +219,7 @@ margin-bottom: 200px;
     content: '';
     position: absolute;
     inset: 3px;
-    background: #000;
+    background: #170522;
 
 }
 .card .imgbox img{
@@ -245,10 +245,12 @@ margin-bottom: 200px;
     overflow: hidden;
 
 
+
 }
 
 .card .content .details{
-    padding: 30px 20px;
+    padding: 30px 30px;
+    padding-top: 50px;
     text-align: center;
     width: 100%;
     transition: 1s;
@@ -261,13 +263,14 @@ margin-bottom: 200px;
 .card .content .details h2{
     font-size: 1.5em;
     font-weight: 500;
-    color: #ffffff;
+    color: #fff;
     line-height: 1.2em;
+
 
 
 }
 .card .content .details p{
-    color: #e5ff51;
+    color: #fff;
     opacity: 0;
     transition: 0.5s;
 
@@ -277,7 +280,7 @@ margin-bottom: 200px;
     display: inline-block;
     padding: 8px 15px;
     background: #2ddb98;
-    color: #171717;
+    color: #000000;
     margin-top: 10px;
     font-weight: 500 ;
     text-decoration: none;
